@@ -72,9 +72,9 @@ public class Socio implements Comparable<Socio>{
                 }
 
                 public String toString(){
-                    return nombre + " " + apellido + "\n" + "Edad: " + edad + "\n" 
-                    + "Pagó última cuota?: " + ultimaCuota + "\n" + "Canchas Alquiladas: " 
-                    + getCanchasAlquiladas() + "\n";
+                    return nombre + " " + apellido + "," + "Edad: " + edad + ","
+                    + "Pagó última cuota?: " + ultimaCuota + "," + "Canchas Alquiladas: "
+                    + getCanchasAlquiladas() + "\n salto linea";
                 }
 
                 @Override

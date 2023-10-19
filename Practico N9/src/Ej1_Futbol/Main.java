@@ -57,7 +57,6 @@ public class Main {
         s8.addCanchaAlquilada(c7);
 
         ArrayList<Socio> socios = new ArrayList<>();
-
         socios.add(s1);
         socios.add(s2);
         socios.add(s3);
@@ -83,8 +82,16 @@ public class Main {
         // Collections.reverse(socios);
         // System.out.println("\n" + socios);
         System.out.println("Ordenados por XXXXXXXX");
-        Collections.sort(socios, new ComparadorCompuesto(new ComparadorCuota(), 
-            new ComparadorCompuesto(new ComparadorPrecio(550), new ComparadorNombre())));
+
+        System.out.println("a) Todas los socios con cuota impaga, ordenados alfabéticamente (primero por apellido, " +
+                "y si hay varios con el mismo apellido por nombre)");
+        Collections.sort(socios, new ComparadorCompuesto(new ComparadorNombre(), new ComparadorCuota()));
         System.out.println("\n" + socios);
+
+
+        //Collections.sort(socios, new ComparadorNombre());
+        /*
+        Collections.sort(socios, new ComparadorCompuesto(new ComparadorCuota(), 
+            new ComparadorCompuesto(new ComparadorPrecio(550), new ComparadorNombre())));*/
     }
 }
