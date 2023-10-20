@@ -9,6 +9,7 @@ public class FiltroNombre extends Filtro{
 
     @Override
     public boolean cumple(Archivo dado) {
-        return dado.getNombre().contains(nombre);
+        return dado.getNombre().contains(nombre); //contenga un caracter
+        //return dado.getNombre().equalsIgnoreCase(nombre); //sea igual
     }
 }

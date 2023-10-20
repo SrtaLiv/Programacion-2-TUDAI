@@ -10,7 +10,7 @@ public class AccesoDirecto extends ElementoSA{
     private ElementoSA referencia;
 
     public AccesoDirecto(ElementoSA referencia) {
-        super(PREFIJO+ referencia.getNombre());
+        super(PREFIJO+ referencia.getNombre()); //luego se imprime por el toString de elemtno
         this.referencia = referencia;
     }
 

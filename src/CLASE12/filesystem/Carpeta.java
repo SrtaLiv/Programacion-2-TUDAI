@@ -35,8 +35,7 @@ public class Carpeta extends ElementoSA{
     public int cantElementos(){
         int cant = super.cantElementos();
         for (int i = 0; i < elementos.size(); i++) {
-            ElementoSA elemHijo = elementos.get(i);
-            cant += elemHijo.cantElementos();
+            cant += elementos.get(i).cantElementos();
         }
         return cant;
     }
