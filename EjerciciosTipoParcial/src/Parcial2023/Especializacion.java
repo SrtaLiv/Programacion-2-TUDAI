@@ -61,7 +61,6 @@ public class Especializacion extends ContenidoEducativo{
         return true;
     }
 
-
    public ArrayList<String> obtenerPalabrasClave(){
         ArrayList<String> palabrasEncontradas = new ArrayList<>();
         for (int i = 0; i < palabrasClave.size(); i++ ) {
