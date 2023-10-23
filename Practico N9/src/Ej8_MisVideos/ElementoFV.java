@@ -1,8 +1,5 @@
 package Ej8_MisVideos;
 
-import Ej2_SistemaArchivos.Archivo;
-import Ej2_SistemaArchivos.ElementoSA;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,15 +13,25 @@ public abstract class ElementoFV {
         this.fechaC = fechaC;
     }
 
+    //PEdidos:
+    public abstract boolean buscarPalabra(FiltroPalabra filtro);
+    //los agrego aca?
+
     public abstract ArrayList<Video> buscar(Filtro f, Comparator<ElementoFV> orden);
-    public int getCantVideos(){
+
+    public int getCantVideos() {
         return 1; //pq el video es 1
     }
+
     public abstract int getDuracion();
+
+
+
 
     public String getTitulo() {
         return titulo;
     }
+
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;

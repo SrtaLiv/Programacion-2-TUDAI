@@ -6,19 +6,27 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Playlist extends ElementoFV{
-    ArrayList<ElementoFV> videos;
+    ArrayList<ElementoFV> elementos;
 
     public Playlist(String titulo, LocalDate fecha) {
         super(titulo, fecha);
-        this.videos = new ArrayList<>();
+        this.elementos = new ArrayList<>();
+    }
+
+    @Override
+    public ArrayList<String> palabrasclave() {
+        return null;
+    }
+
+    public void addElemento(ElementoFV v){
+        elementos.add(v);
     }
 
     @Override
     public ArrayList<Video> buscar(Filtro f, Comparator<ElementoFV> orden) {
         ArrayList<Video> resultado = new ArrayList<>();
-        for (int i = 0; i < videos.size(); i++){
-            ElementoFV hijo = videos.get(i);
-
+        for (int i = 0; i < elementos.size(); i++){
+            ElementoFV hijo = elementos.get(i);
             resultado.addAll(hijo.buscar(f, orden));
         }
         if (orden!=null){
@@ -31,8 +39,8 @@ public class Playlist extends ElementoFV{
     @Override
     public int getCantVideos() {
         int cant = super.getCantVideos();
-        for (int i = 0; i < videos.size() ; i++){
-            cant += videos.get(i).getCantVideos();
+        for (int i = 0; i < elementos.size() ; i++) {
+            cant += elementos.get(i).getCantVideos();
         }
         return cant;
     }

@@ -8,7 +8,8 @@ public class FiltroTitulo extends Filtro {
     }
 
     @Override
-    public boolean cumple(ElementoFV elem) {
-        return elem.getTitulo().equalsIgnoreCase(titulo);
+    public boolean cumple(Video v) {
+        return v.getTitulo().equalsIgnoreCase(titulo);
     }
+
 }

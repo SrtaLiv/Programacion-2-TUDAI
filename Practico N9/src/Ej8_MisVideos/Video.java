@@ -15,16 +15,12 @@ public class Video extends ElementoFV{
     public Video(String titulo, LocalDate fecha, Usuario user, int visualizacion, int duracion, int likes,
                  int dislikes) {
         super(titulo, fecha);
-        this.user = new Usuario();
+        this.user = user;
         this.visualizacion = visualizacion;
         this.duracion = duracion;
         this.likes = 0;
         this.dislikes = 0;
         this.palabrasClave = new ArrayList<>();
-    }
-
-    public void addPalabraClave(String s){
-        palabrasClave.add(s);
     }
 
     public Usuario getUser() {
@@ -41,6 +37,24 @@ public class Video extends ElementoFV{
 
     public void setVisualizacion(int visualizacion) {
         this.visualizacion = visualizacion;
+    }
+
+    @Override
+    public ArrayList<String> palabrasclave() {
+        ArrayList<String> unicos = new ArrayList<>();
+        for (int i = 0; i < palabrasClave.size(); i++){
+            String palabra = palabrasClave.get(i);
+            FiltroPalabra filtro = new FiltroPalabra(palabra);
+
+            if (buscarPalabra(filtro)) {
+                unicos.add(palabra);
+            }
+        }
+        return unicos;
+    }
+
+    public void addPalabraClave(String s){
+        palabrasClave.add(s);
     }
 
     @Override
