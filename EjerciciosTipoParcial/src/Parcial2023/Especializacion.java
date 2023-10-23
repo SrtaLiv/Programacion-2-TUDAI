@@ -10,16 +10,21 @@ public class Especializacion extends ContenidoEducativo{
         super(nombre, precio, notaMin, cantHorasCatedra, palabrasClave);
         this.cursos = new ArrayList<>();
         this.especializaciones = new ArrayList<>();
-
         this.contenido = new ArrayList<>(); //lo pongo como 1 o lo separo?
     }
 
+    //agregar curso y/o contenido?
     public void addContenidoEducativo(ContenidoEducativo c){
         contenido.add(c);
     }
 
-    public int getCantidadDeCursos(){
-        return cursos.size();
+
+    public void addCurso(Curso c){
+        cursos.add(c);
+    }
+
+    public int getCantidadDeContenidos(){
+        return contenido.size();
     }
 
     //curso=10- curso 20 - curso 8
@@ -30,23 +35,25 @@ public class Especializacion extends ContenidoEducativo{
      */
 
     //aca o en el sistema?
-    public Curso cursoMaxCosto(){
+    public Curso cursoMaxCosto() {
         Curso cursoMax = null;
-        int contador = -1;
-        for (int i = 0; i < cursos.size(); i++){
-            if (cursos.get(i).getPrecio() > contador){
-                contador = (int) cursos.get(i).getPrecio();
-                cursoMax = cursos.get(i);
+        double maxPrecio = -1.0; // Inicializa con un valor negativo para comparar con precios reales
+
+        for (Curso curso : cursos) {
+            if (curso.getPrecio() > maxPrecio) {
+                maxPrecio = curso.getPrecio();
+                cursoMax = curso;
             }
         }
         return cursoMax;
     }
 
+
     @Override
     public double getPrecio() {
-        int precio = 10;
-        for (int i = 0; i < cursos.size(); i++ ) {
-            precio += cursos.get(i).getPrecio();
+        double precio = 0.0;
+        for (int i = 0; i < contenido.size() ; i++ ) {
+            precio += contenido.get(i).getPrecio();
         }
         return precio;
     }

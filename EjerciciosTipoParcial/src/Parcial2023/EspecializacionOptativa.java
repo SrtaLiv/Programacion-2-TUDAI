@@ -11,7 +11,7 @@ public class EspecializacionOptativa extends Especializacion {
 
     @Override
     public boolean aprobo() {
-        int cantidadMinimaAprobados  = super.getCantidadDeCursos()/2;
+        int cantidadMinimaAprobados  = super.getCantidadDeContenidos()/2;
         int contador = 0;
         for (int i = 0 ; i < cursos.size() ; i++) {
             if (cursos.get(i).aprobo()) {

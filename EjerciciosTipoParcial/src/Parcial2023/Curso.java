@@ -19,19 +19,12 @@ public class Curso extends ContenidoEducativo{
         return this.precio;
     }
 
-    public void aprobarCurso(int nota){
-        if (nota >= this.getNotaMin()){
-            this.aprobado = true;
-        }
-        else this.aprobado = false;
-    }
-
     @Override
     public boolean aprobo() {
         return aprobado; //no estoy segura..
     }
 
-
-
-
+    public void setAprobado(boolean aprobado) {
+        this.aprobado = aprobado;
+    }
 }

@@ -7,20 +7,24 @@ import java.util.Locale;
 public class Alumno {
     String nombre;
     String apellido;
-    ArrayList<Curso> cursos;
-    ArrayList<Curso> cursosRendidos; //Curso, fecha y nota.
+    ArrayList<ContenidoEducativo> contenidoEducativos;
+    ArrayList<ContenidoEducativo> cursosRendidos; //Curso, fecha y nota.
+    boolean aprobado;
 
     public Alumno(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.cursos = new ArrayList<>();
+        this.contenidoEducativos = new ArrayList<>();
         this.cursosRendidos = new ArrayList<>();
     }
 
 
-    public void agregarCurso(Curso c, LocalDate fecha, int nota){
-        cursosRendidos.add(c);
+    public void agregarCursoRendido(ContenidoEducativo c, LocalDate fecha, int nota){
+       cursosRendidos.add(c);
     }
+
+
+    //un alumno esta aprobado si aprobo TODOS los cursos
 
 
     public String getNombre() {
@@ -39,29 +43,26 @@ public class Alumno {
         this.apellido = apellido;
     }
 
-    public ArrayList<Curso> getCursos() {
-        return cursos;
-    }
-
-    public void setCursos(ArrayList<Curso> cursos) {
-        this.cursos = cursos;
-    }
-
-    public ArrayList<Curso> getCursosRendidos() {
-        return cursosRendidos;
-    }
-
-    public void setCursosRendidos(ArrayList<Curso> cursosRendidos) {
-        this.cursosRendidos = cursosRendidos;
-    }
 
     @Override
     public String toString() {
         return "Alumno{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", cursos=" + cursos +
+                ", cursos=" + contenidoEducativos +
                 ", cursosRendidos=" + cursosRendidos +
                 '}';
+    }
+
+    public ArrayList<ContenidoEducativo> getContenidoEducativos() {
+        return contenidoEducativos;
+    }
+
+    public ArrayList<ContenidoEducativo> getCursosRendidos() {
+        return cursosRendidos;
+    }
+
+    public void setContenidoEducativos(ArrayList<ContenidoEducativo> contenidoEducativos) {
+        this.contenidoEducativos = contenidoEducativos;
     }
 }

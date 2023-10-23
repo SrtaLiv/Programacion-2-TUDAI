@@ -12,20 +12,36 @@ public class SistemaEducacion {
         this.contenido = new ArrayList<>();
     }
 
+    public void addContenido(ContenidoEducativo c){
+        contenido.add(c);
+    }
+
     public double calcularPrecio(ContenidoEducativo c){
         return c.getPrecio();
     }
 
+    //
+
     public double calcularPrecioPorAlumno(Alumno al){;
         double precio = 0.0;
-        for (int i = 0 ; i < al.getCursosRendidos().size() ; i++){
-            precio += al.getCursosRendidos().get(i).getPrecio();
+        for (int i = 0 ; i < al.cursosRendidos.size() ; i++){
+            if (al.aprobado){
+                precio += 0;
+            } else precio += al.getCursosRendidos().get(i).getPrecio();
         }
         return precio;
     }
 
+    /*
+    public boolean aproboElCurso(Alumno al){
+        ArrayList<ContenidoEducativo> aprobado = new ArrayList<>();
+        for (int i = 0; i< al.cursosRendidos.size(); i++){
+        //    if (al.getCursosRendidos().get(i))
+        }
+    }*/
+
     public int obtenerCantidadDeCursos(Especializacion esp){
-        return esp.getCantidadDeCursos();
+        return esp.getCantidadDeContenidos();
     }
 
     public Curso cursoMaxCosto(Especializacion esp){
