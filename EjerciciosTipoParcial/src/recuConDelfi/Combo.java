@@ -47,7 +47,7 @@ public class Combo extends ElementoBZ{
         }
         return cant;
     }
-
+/*
     @Override
     public ArrayList<ElementoBZ> armarCombo(Filtro f) {
         ArrayList<Producto> combos = new ArrayList<>();
@@ -62,7 +62,7 @@ public class Combo extends ElementoBZ{
         }
         return combos;
     }
-
+*/
     /*
 
     public ArrayList<Archivo> buscar(Filtro condicion, Comparator<ElementoSA> orden){
