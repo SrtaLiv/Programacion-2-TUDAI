@@ -1,6 +1,12 @@
--Ejercicios en clase son codigos compartidos por los profesores.
--En finales encuentran ejercios tanto en enunciado como en codigo. Algunos estan resueltos por los profes y otros no estoy segura. 
--Teoria las filminas de cada clase
--Practicos
+<h1>ClasesFacu</h1>
+-Ejercicios en clase tiene codigos compartidos por los profesores.
+<br>
+<h1>Finales</h1>
+-En Encuentran ejercios enunciados y codigos. Algunos estan resueltos por los profes y otros no. <br>
+<h1>Teoria</h1>
+-Teoria las filminas de cada clase y patrones de diseño<br>
 
-Espero que les sirva y cualquier cosa me pueden escribir por email @anaoliviatodesco@gmail.com
+<h1>Practicos</h1>
+<br>Muchos ejercicios para practicar
+
+<p>Espero que les sirva y cualquier cosa me pueden escribir por email @anaoliviatodesco@gmail.com</p>
