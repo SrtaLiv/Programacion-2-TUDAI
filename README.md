@@ -2,7 +2,7 @@
 -Ejercicios en clase tiene codigos compartidos por los profesores.
 <br>
 <h1>Finales</h1>
--En Encuentran ejercios enunciados y codigos. Algunos estan resueltos por los profes y otros no. <br>
+-Encuentran ejercios enunciados y codigos. Algunos estan resueltos por los profes y otros no. <br>
 <h1>Teoria</h1>
 -Teoria las filminas de cada clase y patrones de diseño<br>
 
