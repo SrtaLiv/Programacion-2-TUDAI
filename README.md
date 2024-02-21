@@ -8,5 +8,5 @@
 
 <h1>Practicos</h1>
 Muchos ejercicios para practicar
-
-<p>Espero que les sirva y cualquier cosa me pueden escribir por email @anaoliviatodesco@gmail.com</p>
+<br>
+<p>Espero que les sirva y cualquier cosa me pueden escribir por email anaoliviatodesco@gmail.com</p>
