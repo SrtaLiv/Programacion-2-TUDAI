@@ -7,6 +7,6 @@
 -Teoria las filminas de cada clase y patrones de diseño<br>
 
 <h1>Practicos</h1>
-<br>Muchos ejercicios para practicar
+Muchos ejercicios para practicar
 
 <p>Espero que les sirva y cualquier cosa me pueden escribir por email @anaoliviatodesco@gmail.com</p>
