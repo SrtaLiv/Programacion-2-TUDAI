@@ -1,6 +1,8 @@
 package FINALES.Final2024Feb;
 
-public class Libro{
+import java.util.ArrayList;
+
+public class Libros{
     /*
      * LIBRO
      * titulo
@@ -14,7 +16,7 @@ public class Libro{
     String editor;
     ArrayList<Capitulo> elementos;
 
-    public Libro(String titulo, int anio, String editor){
+    public Libros(String titulo, int anio, String editor){
         this.titulo = titulo;
         this.anio = anio;
         this.editor = editor;
@@ -22,7 +24,7 @@ public class Libro{
     }
 
     public ArrayList<Capitulo> getArray(){
-        return new ArrayList<Capitulo>()
+        return new ArrayList<Capitulo>();
     }
 
 

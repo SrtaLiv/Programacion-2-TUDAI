@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FinalesYParciales" />
-        <module name="CLASES" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CLASES" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

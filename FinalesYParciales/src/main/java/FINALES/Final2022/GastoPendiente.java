@@ -37,7 +37,7 @@ public class GastoPendiente extends GastoAB{
 
     @Override
     public LocalDate getFecha() {
-        if ()
+
         return null;
     }
 
