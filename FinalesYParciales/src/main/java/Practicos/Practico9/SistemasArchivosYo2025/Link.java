@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Link extends ElemAB{
     private ElemAB elem;
+    private final static int TAMANIO = 1;
 
     public Link(ElemAB elem, LocalDate localDate) {
         super("Acceso directo a " + elem.getNomrbe(), localDate);
@@ -30,6 +31,6 @@ public class Link extends ElemAB{
 
     @Override
     public int getTamanio() {
-        return 1;
+        return TAMANIO;
     }
 }

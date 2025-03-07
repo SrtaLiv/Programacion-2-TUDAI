@@ -1,6 +1,6 @@
-package CLASES.Abstractas.SistemaArchivos;
+package Clases.Abstractas.SistemaArchivos;
 
-public class Archivo extends ElementoSA{
+public class Archivo extends ElementoSA {
 
     private double tamanio;
 

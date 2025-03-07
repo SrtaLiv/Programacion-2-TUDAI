@@ -1,11 +1,10 @@
-package CLASES.Abstractas.SistemaArchivos;
-
+package Clases.Abstractas.SistemaArchivos;
 public class Main {
     public static void main(String[] args) {
-        Carpeta raiz = new Carpeta("\\");
+        CLASES.Abstractas.SistemaArchivos.Carpeta raiz = new Carpeta("\\");
 
-        Carpeta tudai = new Carpeta("Tudai");
-        Carpeta primero = new Carpeta("1er anio");
+        CLASES.Abstractas.SistemaArchivos.Carpeta tudai = new CLASES.Abstractas.SistemaArchivos.Carpeta("Tudai");
+        CLASES.Abstractas.SistemaArchivos.Carpeta primero = new Carpeta("1er anio");
         raiz.addElemento(tudai);
         tudai.addElemento(primero);
 

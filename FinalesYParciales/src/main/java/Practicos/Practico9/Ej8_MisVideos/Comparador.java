@@ -8,7 +8,9 @@ public abstract class Comparador implements Comparator<ElementoFV> {
     public Comparador(Comparator<ElementoFV> siguienteCriterio){
         this.siguienteCriterio = siguienteCriterio;
     }
+
     public abstract int comparar(ElementoFV o1, ElementoFV o2);
+
     @Override
     public int compare(ElementoFV o1, ElementoFV o2) {
         int dif = comparar(o1, o2);

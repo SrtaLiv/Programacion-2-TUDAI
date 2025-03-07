@@ -1,10 +1,10 @@
-package CLASES.Abstractas.SistemaArchivos;
+package Clases.Abstractas.SistemaArchivos;
 import java.time.LocalDate;
 
 public abstract class ElementoSA {
     private String nombre;
     private LocalDate fCreacion;
-    private Carpeta contenedor = null;
+    private CLASES.Abstractas.SistemaArchivos.Carpeta contenedor = null;
 
     public ElementoSA(String nombre) {
         this.nombre = nombre;
@@ -15,11 +15,11 @@ public abstract class ElementoSA {
         this.nombre = nombre;
     }
 
-    public Carpeta getContenedor() {
+    public CLASES.Abstractas.SistemaArchivos.Carpeta getContenedor() {
         return contenedor;
     }
 
-    public void setContenedor(Carpeta contenedor) {
+    public void setContenedor(CLASES.Abstractas.SistemaArchivos.Carpeta contenedor) {
         this.contenedor = contenedor;
     }
 

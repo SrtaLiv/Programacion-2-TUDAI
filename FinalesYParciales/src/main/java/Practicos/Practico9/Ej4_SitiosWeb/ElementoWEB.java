@@ -12,7 +12,8 @@ public abstract class ElementoWEB {
     public boolean equals(Object o) {
         ElementoWEB otro = (ElementoWEB) o;
         try{
-            return otro.getTitulo().equals(this.getTitulo());
+            return otro.getTitulo().equals(this.getTitulo()) &&
+            otro.getDescripcion().equals(this.getDescripcion());
         }
         catch (Exception e){
             return false;

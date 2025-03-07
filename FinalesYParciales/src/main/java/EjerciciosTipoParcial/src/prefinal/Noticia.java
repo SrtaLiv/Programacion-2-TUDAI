@@ -8,8 +8,7 @@ public class Noticia extends ElementoPortal {
 	private String contenido;
 	private String categoria;
 	private ArrayList<String> palClaves;
-	
-	
+
 	public Noticia(String editor, String titulo, String contenido, String categoria) {
 		super(editor, titulo);
 		this.contenido = contenido;

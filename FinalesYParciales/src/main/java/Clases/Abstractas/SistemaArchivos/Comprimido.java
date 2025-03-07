@@ -1,6 +1,6 @@
-package CLASES.Abstractas.SistemaArchivos;
+package Clases.Abstractas.SistemaArchivos;
 
-public class Comprimido extends Carpeta{
+public class Comprimido extends CLASES.Abstractas.SistemaArchivos.Carpeta {
     private double tasaCompresion;
 
     public Comprimido(String nombre, double tasaCompresion) {
