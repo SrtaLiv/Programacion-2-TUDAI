@@ -40,13 +40,12 @@ public class Traje extends TrajeAB{
     }
 
     @Override
-    public TrajeAB copia(Traje traje, Modificador modificador) {
+    public TrajeAB copia(Modificador modificador) {
         Traje trajeModificado = new Traje(this.getNombre(), this.getTalle(), this.getPlanetaOrigen());
         for (String metal : getMetales()){
             trajeModificado.addMetal(metal);
         }
-        modificador.modificar(traje);
-        return trajeModificado;
+        return modificador.modificar(trajeModificado);
     }
 
     @Override

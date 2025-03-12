@@ -22,5 +22,5 @@ public abstract class TrajeAB {
     public abstract int getTalle();
     public abstract ArrayList<String> getMetales();
     public abstract ArrayList<TrajeAB> buscar(Filtro ff, Miembro miembro);
-    public abstract TrajeAB copia(Traje traje, Modificador modificador);
+    public abstract TrajeAB copia(Modificador modificador);
 }

@@ -52,10 +52,10 @@ public class EquipoTactico extends TrajeAB{
     }
 
     @Override
-    public TrajeAB copia(Traje traje, Modificador modificador) {
+    public TrajeAB copia(Modificador modificador) {
         ArrayList<TrajeAB> hijosCopia = new ArrayList<>();
         for (TrajeAB hijas : elementos) {
-            hijosCopia.add(hijas.copia(traje, modificador));
+            hijosCopia.add(hijas.copia(modificador));
         }
         EquipoTactico copia = new EquipoTactico(this.getNombre());
         if (!hijosCopia.isEmpty()){
@@ -64,11 +64,6 @@ public class EquipoTactico extends TrajeAB{
             }
         }
         return copia;
-    }
-
-    @Override
-    public String getNombre() {
-        return this.getNombre();
     }
 
     public ArrayList<TrajeAB> getElementos() {
