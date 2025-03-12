@@ -1,4 +1,4 @@
-package FINALES.FinalFebrero_14_02_2025;
+package FINALES.FinalFebrero_14_02_2024_Depracated;
 
 public class CalculadorPorcentajeConMonto extends Calculador {
     // Cobrar Porcentaje de su valor mas un monto fijo a modo de seguro

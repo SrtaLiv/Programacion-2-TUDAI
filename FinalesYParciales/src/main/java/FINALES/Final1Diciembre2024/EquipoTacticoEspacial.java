@@ -8,15 +8,9 @@ public class EquipoTacticoEspacial extends EquipoTactico{
         super(nombre);
     }
 
-    public ArrayList<String> getMetales() { //union sin repetidos
-        return super.getMetales();
-    }
-
     //El primer talle de los elementos
     public int getTalle(){
-        ArrayList<TrajeAB> elem = super.getElementos();
-        TrajeAB aux = elem.get(0);
-        return aux.getTalle();
+        return elementos.getFirst().getTalle();
     }
 
 }
