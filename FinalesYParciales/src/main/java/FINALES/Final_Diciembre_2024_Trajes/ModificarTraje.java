@@ -1,6 +1,4 @@
-package FINALES.Final1Diciembre2024;
-
-import FINALES.Final_9_Agosto_2024_Comidas.ElemAB;
+package FINALES.Final_Diciembre_2024_Trajes;
 
 public class ModificarTraje extends Modificador{
     private int talle;

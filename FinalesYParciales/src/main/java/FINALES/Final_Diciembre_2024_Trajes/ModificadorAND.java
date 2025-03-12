@@ -1,4 +1,4 @@
-package FINALES.Final1Diciembre2024;
+package FINALES.Final_Diciembre_2024_Trajes;
 
 public class ModificadorAND extends Modificador{
     private Modificador m1, m2;
