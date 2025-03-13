@@ -4,10 +4,11 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
+//
 public class ElementoDeprecated extends ElemAB {
     private static double descuento;
     private LocalDate fechaObsoleto;
-    private ElemAB elementoRepresentado;
+    private ElemAB elementoRepresentado; // Decorator
 
     public ElementoDeprecated(int id, LocalDate fechaObsoleto, ElemAB elemAB) {
         super(id);
