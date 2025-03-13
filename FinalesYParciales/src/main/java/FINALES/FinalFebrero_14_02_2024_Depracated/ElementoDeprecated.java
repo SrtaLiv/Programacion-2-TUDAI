@@ -1,4 +1,4 @@
-package FINALES.FinalFebrero_14_02_2025;
+package FINALES.FinalFebrero_14_02_2024_Depracated;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -40,7 +40,6 @@ public class ElementoDeprecated extends ElemAB {
             }
         }
     }
-
 
     @Override
     public LocalDate getFechaCompra() {

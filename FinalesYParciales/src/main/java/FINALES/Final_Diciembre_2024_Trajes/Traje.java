@@ -1,4 +1,4 @@
-package FINALES.Final1Diciembre2024;
+package FINALES.Final_Diciembre_2024_Trajes;
 
 import java.util.ArrayList;
 
@@ -6,10 +6,6 @@ public class Traje extends TrajeAB{
     private int talle;
     private ArrayList<String> metalesEnConfeccion;
     private String planetaOrigen;
-
-    public Traje(String nombre) {
-        super(nombre);
-    }
 
     public Traje(String nombre, int talle, String planetaOrigen) {
         super(nombre);
@@ -21,6 +17,10 @@ public class Traje extends TrajeAB{
     @Override
     public int getTalle() {
         return 0;
+    }
+
+    public void addMetal(String ss){
+        metalesEnConfeccion.add(ss);
     }
 
     @Override
@@ -35,6 +35,15 @@ public class Traje extends TrajeAB{
             trajesRecomendados.add(this);
         }
         return trajesRecomendados;
+    }
+
+    @Override
+    public TrajeAB copia(Modificador modificador) {
+        Traje trajeModificado = new Traje(this.getNombre(), this.getTalle(), this.getPlanetaOrigen());
+        for (String metal : getMetales()){
+            trajeModificado.addMetal(metal);
+        }
+        return modificador.modificar(trajeModificado);
     }
 
     @Override

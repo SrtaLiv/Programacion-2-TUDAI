@@ -1,4 +1,4 @@
-package FINALES.Final1Diciembre2024;
+package FINALES.Final_Diciembre_2024_Trajes;
 
 import java.util.ArrayList;
 

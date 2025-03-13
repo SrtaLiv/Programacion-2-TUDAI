@@ -1,4 +1,4 @@
-package FINALES.FinalFebrero_14_02_2025;
+package FINALES.FinalFebrero_14_02_2024_Depracated;
 
 public class ComparadorCompuesto extends Calculador {
     //Este comparador puede resolver el porcentaje de su valor mas el monto fijo

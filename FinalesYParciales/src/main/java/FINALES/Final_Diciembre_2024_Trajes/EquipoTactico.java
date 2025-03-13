@@ -1,13 +1,17 @@
-package FINALES.Final1Diciembre2024;
+package FINALES.Final_Diciembre_2024_Trajes;
 
 import java.util.ArrayList;
 
 public class EquipoTactico extends TrajeAB{
-    private ArrayList<TrajeAB> elementos;
+    protected ArrayList<TrajeAB> elementos;
 
     public EquipoTactico(String nombre) {
         super(nombre);
         this.elementos = new ArrayList<>();
+    }
+
+    public void addElemento(TrajeAB trajeAB){
+        elementos.add(trajeAB);
     }
 
     @Override
@@ -25,8 +29,7 @@ public class EquipoTactico extends TrajeAB{
     public ArrayList<String> getMetales() { //union sin repetidos
         ArrayList<String> metales = new ArrayList<>();
         for (TrajeAB t : elementos) {
-            ArrayList<String> result = new ArrayList<>();
-            result.addAll(t.getMetales());
+            ArrayList<String> result = new ArrayList<>(t.getMetales());
             for (String m : result) {
                 if (!metales.contains(m)){
                     metales.add(m);
@@ -47,8 +50,18 @@ public class EquipoTactico extends TrajeAB{
     }
 
     @Override
-    public String getNombre() {
-        return this.getNombre();
+    public TrajeAB copia(Modificador modificador) {
+        ArrayList<TrajeAB> hijosCopia = new ArrayList<>();
+        for (TrajeAB hijas : elementos) {
+            hijosCopia.add(hijas.copia(modificador));
+        }
+        EquipoTactico copia = new EquipoTactico(this.getNombre());
+        if (!hijosCopia.isEmpty()){
+            for (TrajeAB hijo : hijosCopia){
+                copia.addElemento(hijo);
+            }
+        }
+        return copia;
     }
 
     public ArrayList<TrajeAB> getElementos() {
